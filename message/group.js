@@ -40,7 +40,9 @@ module.exports = welcome = async (giie, anu) => {
                 time_wel = moment.tz('Asia/Jakarta').format("HH:mm")
                 teks = `Hae ${anu_user} 🐒`
 	            buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/welcome?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://i.ibb.co/LRY5KTY/Portfolio-Archivi-Page-2-of-7-Federica-Iossa.jpg`)
-                buttons = [{buttonId: `.command`,buttonText:{displayText: 'SELAMAT DATANG'},type:1}]
+                buttons = [{buttonId: `#lol`,buttonText:{displayText: `Hai
+aku ${anu_user}, kamu lagi sibuk ya ? aku cuma mau bilang kalau aku tuh selama ini memendam perasaan sama kamu 😔, jujur aku gak kuat jika harus dipendam ini semua sendirian 🙍‍♂️, ketika mata ini memandang raut wajahmu yang indah, hanya tiga kata yang terucap dari lubuk hatiku yang paling dalam, aku cinta kamu yogi 🥰,
+Aku hanya manusia biasa yang memiliki banyak kekurangan dan mungkin tak pantas mengharapkan cintamu 😞. Namun, jika kamu bersedia menerimaku menjadi kekasih, aku berjanji akan melakukan apa pun yang terbaik untukmu. Maukah kamu menerima cintaku gi 🌹 ? `},type:1}]
                 imageMsg = (await giie.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
                 buttonsMessage = { contentText: `${teks}`, footerText: '_Developer by: AyogiAk_', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
                 prep = await giie.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
@@ -56,7 +58,9 @@ module.exports = welcome = async (giie, anu) => {
                 memeg = mdata.participants.length
                 out = `Dadaahh ${anu_user} 🐕`
                 buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/goodbye?nama=${anu_user}&descriminator=${time_wel}&memcount=${memeg}&gcname=${encodeURI(mdata.subject)}&pp=${pp_user}&bg=https://i.ibb.co/8gHPzt9/UR-Tsushima-Yoshiko-What-Do-I-Do-What-Do-I-Do-Angel-of-Eden-Cards-list-All-Stars-Idol-Story-Love-Liv.jpg`)
-                buttons = [{buttonId: `#creator 1`,buttonText:{displayText: 'SELAMAT JALAN'},type:1}]
+                buttons = [{buttonId: `#lol`,buttonText:{displayText: `Hai
+aku ${anu_user}, kamu lagi sibuk ya ? aku cuma mau bilang kalau aku tuh selama ini memendam perasaan sama kamu 😔, jujur aku gak kuat jika harus dipendam ini semua sendirian 🙍‍♂️, ketika mata ini memandang raut wajahmu yang indah, hanya tiga kata yang terucap dari lubuk hatiku yang paling dalam, aku cinta kamu yogi 🥰,
+Aku hanya manusia biasa yang memiliki banyak kekurangan dan mungkin tak pantas mengharapkan cintamu 😞. Namun, jika kamu bersedia menerimaku menjadi kekasih, aku berjanji akan melakukan apa pun yang terbaik untukmu. Maukah kamu menerima cintaku gi 🌹 ? `},type:1}]
                 imageMsg = (await giie.prepareMessageMedia((buff), 'imageMessage', {thumbnail: buff})).imageMessage
                 buttonsMessage = { contentText: `${out}`, footerText: '_Developer by: AyogiAk_', imageMessage: imageMsg, buttons: buttons, headerType: 4 }
                 prep = await giie.prepareMessageFromContent(mdata.id,{buttonsMessage},{})
